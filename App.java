@@ -1,12 +1,8 @@
-import sun.util.resources.LocaleData;
-
 import java.time.LocalDate;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
-import java.io.*;
 
 public class App {
     private static LocalDate date_birthday;
@@ -42,21 +38,6 @@ public class App {
             System.out.println("При вводе необходимо использовать только буквы");
         }
 
-        /*Integer day = Integer.parseInt(birthdayPerson[0]);
-        Integer month = Integer.parseInt(birthdayPerson[1]);
-        Integer year = Integer.parseInt(birthdayPerson[2]);
-
-        if (day < 1 | day > 31 | month < 1 | month > 12) {
-            throw new Exception("Неправильные введеные данные: дата рождения!");
-        }
-
-
-        LocalDate date_birthday = LocalDate.of(year, month, day);
-
-
-        if (LocalDate.now()- date_birthday.get < 0) {
-            throw new Exception("Неправильные введеные данные: дата рождения!");
-        }*/
         try {
             date_birthday = LocalDate.parse(date, DateTimeFormatter
                     .ofPattern(pattern)
