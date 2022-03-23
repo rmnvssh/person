@@ -1,7 +1,5 @@
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class Person {
     private String firstname, middlename, lastname, sex;
@@ -55,13 +53,6 @@ public class Person {
         LocalDate date = LocalDate.now();
 
         this.age = Period.between(date_birthday, date).getYears();
-
-        /*this.age = date.get(Calendar.YEAR) - this.date_birthday.get(Calendar.YEAR);
-        if( date.get(Calendar.MONTH)<=date_birthday.get(Calendar.MONTH)) {
-            if (date.get(Calendar.DAY_OF_MONTH) <= date_birthday.get(Calendar.DAY_OF_MONTH))
-                this.age--;
-        }*/
-
 
     }
 }
